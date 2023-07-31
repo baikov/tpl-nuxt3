@@ -16,6 +16,10 @@ logs
 .DS_Store
 .fleet
 .idea
+.vite-inspect
+.eslintcache
+coverage
+.unlighthouse
 
 # Local env files
 .env
