@@ -1,0 +1,43 @@
+version: '3.9'
+
+volumes:
+  tpl_node_modules: {}
+
+services:
+  nuxt:
+    build:
+      context: .
+      dockerfile: ./compose/local/Dockerfile
+    image: ${COMPOSE_PROJECT_NAME}_local_nuxt
+    container_name: ${COMPOSE_PROJECT_NAME}_local_nuxt
+    env_file: .env
+    expose:
+      - 3000
+      - 24678
+    command: yarn dev
+    volumes:
+      - .:/nuxt
+      - tpl_node_modules:/nuxt/node_modules
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=dev-proxy"
+      # Nuxt
+      - "traefik.http.routers.nuxt.rule=(Host(`${DOMAIN}`) || Host(`www.${DOMAIN}`))"
+      - "traefik.http.routers.nuxt.service=nuxt@docker"
+      - "traefik.http.routers.nuxt.entrypoints=websecure"
+      - "traefik.http.routers.nuxt.tls=true"
+      - "traefik.http.routers.nuxt.priority=5"
+      - "traefik.http.routers.nuxt.middlewares=security-headers@file,compression@file"
+      - "traefik.http.services.nuxt.loadbalancer.server.port=3000"
+      # HMR
+      - "traefik.http.routers.hmr.rule=(Host(`${DOMAIN}`) || Host(`www.${DOMAIN}`))"
+      - "traefik.http.routers.hmr.service=hmr@docker"
+      - "traefik.http.routers.hmr.entrypoints=hmr"
+      - "traefik.http.routers.hmr.tls=true"
+      - "traefik.http.services.hmr.loadbalancer.server.port=24678"
+    networks:
+      - dev-proxy
+
+networks:
+  dev-proxy:
+    external: true
