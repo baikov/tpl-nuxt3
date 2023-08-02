@@ -10,6 +10,7 @@ services:
     container_name: ${COMPOSE_PROJECT_NAME}_nuxt
     env_file: .env
     restart: unless-stopped
+    # command: sh -c "node .output/server/index.mjs"
     expose:
       - 3000
     labels:
