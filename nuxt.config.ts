@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   vite: {
     server: {
       hmr: {
-        protocol: 'wss',
+        protocol: process.env.COMPOSE_FILE === 'local.yml' || process.env.COMPOSE_FILE === 'local.traefik.yml' ? 'ws' : 'wss',
       }
     }
   }

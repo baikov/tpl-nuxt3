@@ -6,5 +6,13 @@ Other parts:
 2. [Nuxt 3 production-ready template in Docker (SPA/SSR)](https://github.com/baikov/tpl-nuxt3)
 3. [Django/DRF backend in Docker (based on django-cookiecutter)](https://github.com/baikov/drf-tpl)
 
-## Development local with Docker Compose
+## Local development
+
+### Local development as separate service
+
+### Local development on custom domain without https
+
+### Local development on custom domain with https
+
+## Production SSR
 ...
