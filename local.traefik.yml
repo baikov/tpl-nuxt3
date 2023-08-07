@@ -12,6 +12,8 @@ services:
     image: ${COMPOSE_PROJECT_NAME}_local_nuxt
     container_name: ${COMPOSE_PROJECT_NAME}_local_nuxt
     env_file: .env
+    environment:
+      - HMR_PROTOCOL=ws
     expose:
       - 3000
       - 24678

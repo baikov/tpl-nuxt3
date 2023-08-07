@@ -9,8 +9,10 @@ services:
     image: ${COMPOSE_PROJECT_NAME}_nuxt
     container_name: ${COMPOSE_PROJECT_NAME}_nuxt
     env_file: .env
+    environment:
+      - PROTOCOL=https
     restart: unless-stopped
-    # command: sh -c "node .output/server/index.mjs"
+    command: sh -c "node .output/server/index.mjs"
     expose:
       - 3000
     labels:

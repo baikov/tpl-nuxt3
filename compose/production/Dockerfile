@@ -22,7 +22,3 @@ COPY --from=builder /nuxt/package.json ./package.json
 COPY --from=builder /nuxt/yarn.lock ./yarn.lock
 
 COPY --from=builder /nuxt/.output ./.output
-
-ENV HOST 0.0.0.0
-
-CMD ["node", ".output/server/index.mjs"]

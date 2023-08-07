@@ -6,6 +6,8 @@ services:
     expose:
       - 3000
       - 24678
+    environment:
+      - HMR_PROTOCOL=wss
     labels:
       # Nuxt
       - "traefik.http.routers.nuxt.rule=(Host(`${DOMAIN}`) || Host(`www.${DOMAIN}`))"
