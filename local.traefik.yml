@@ -1,27 +1,11 @@
 version: '3.9'
-name: ${COMPOSE_PROJECT_NAME}
-
-volumes:
-  node_modules: {}
 
 services:
   nuxt:
-    build:
-      context: .
-      dockerfile: ./compose/local/Dockerfile
-    image: ${COMPOSE_PROJECT_NAME}_local_nuxt
-    container_name: ${COMPOSE_PROJECT_NAME}_local_nuxt
-    env_file: .env
-    environment:
-      - HMR_PROTOCOL=ws
-      - PROTOCOL=http
+    ports: !reset []
     expose:
       - 3000
       - 24678
-    command: yarn dev
-    volumes:
-      - .:/nuxt
-      - node_modules:/nuxt/node_modules
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=dev-proxy"
