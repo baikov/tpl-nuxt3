@@ -20,7 +20,7 @@ Other parts:
 
 Choose one of `.env` presets. HMR working in all modes.
 
-> To use `Mode 1` and `Mode 2`, a raised container from [this repo](https://github.com/baikov/tpl-traefik) with Traefik is required. Because in Traefik compose, an external network is created to which frontend and backend containers are connected.
+> To use `Mode 1` and `Mode 2`, a raised container from [this repo](https://github.com/baikov/tpl-traefik) with Traefik is required. Because an external network to which frontend and backend containers are connected is created in Traefik compose.
 
 ### Mode 0: As separate dev server on custom port
 
@@ -91,7 +91,7 @@ export default defineNuxtConfig({
 
 ## Deploy to production
 
-> Using this modes assumes that the `your_domain.com` is already bound to your server (`A` records are configured) and Traefik container raised in production mode
+> Using this modes assumes that the `your-domain.com` is already bound to your server (`A` records are configured) and Traefik container raised in production mode
 
 ### Mode 3: SSR (Universal rendering) with Node.js server
 
@@ -105,7 +105,7 @@ export default defineNuxtConfig({
   ```env
   # Mode 3: For production with SSR
   COMPOSE_FILE=production.yml
-  DOMAIN=your_domain.com
+  DOMAIN=your-domain.com
     ```
 1. Run container with `docker compose build` and `docker compose up -d`
 
