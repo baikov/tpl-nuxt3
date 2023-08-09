@@ -27,16 +27,16 @@ Choose one of `.env` presets. HMR working in all modes.
 1. No need for a Traefik container
 1. Rename `.env.example` to `.env`
 1. Set `uniqe` project name
-  ```env
-  COMPOSE_PROJECT_NAME=uniqe_name
-  ```
+    ```env
+    COMPOSE_PROJECT_NAME=uniqe_name
+    ```
 1. Uncomment `Mode 0` block:
-  ```env
-  # Mode 0: As separate dev server on custom port
-  COMPOSE_FILE=local.yml
-  DOMAIN=localhost
-  NUXT_DOCKER_PORT=3018  # custom port
-  HMR_DOCKER_PORT=24678
+    ```env
+    # Mode 0: As separate dev server on custom port
+    COMPOSE_FILE=local.yml
+    DOMAIN=localhost
+    NUXT_DOCKER_PORT=3018  # custom port
+    HMR_DOCKER_PORT=24678
     ```
 1. Run `docker compose build` and `docker compose up -d`
 
@@ -45,14 +45,14 @@ Choose one of `.env` presets. HMR working in all modes.
 1. The Traefik container must be running in `Mode 1`
 1. Rename `.env.example` to `.env`
 1. Set the project name same as `COMPOSE_PROJECT_NAME` in Traefik `.env`
-  ```env
-  COMPOSE_PROJECT_NAME=example
-  ```
+    ```env
+    COMPOSE_PROJECT_NAME=example
+    ```
 1. Uncomment `Mode 1` block:
-  ```env
-  # Mode 1: As dev server behind the Traefik with http
-  COMPOSE_FILE=local.yml:local.traefik.yml
-  DOMAIN=localhost  # or another aliace for 127.0.0.1 declared in etc/hosts, but same as DOMAIN in Traefik .env!
+    ```env
+    # Mode 1: As dev server behind the Traefik with http
+    COMPOSE_FILE=local.yml:local.traefik.yml
+    DOMAIN=localhost  # or another aliace for 127.0.0.1 declared in etc/hosts, but same as DOMAIN in Traefik .env!
     ```
 1. Run Traefik container, then run Nuxt container with `docker compose build` and `docker compose up -d`
 
@@ -61,14 +61,14 @@ Choose one of `.env` presets. HMR working in all modes.
 1. The Traefik container must be running in `Mode 2`
 1. Rename `.env.example` to `.env`
 1. Set the project name same as `COMPOSE_PROJECT_NAME` in Traefik `.env`
-  ```env
-  COMPOSE_PROJECT_NAME=example
-  ```
+    ```env
+    COMPOSE_PROJECT_NAME=example
+    ```
 1. Uncomment `Mode 2` block:
-  ```env
-  # Mode 2: As dev server behind the Traefik + SSL and custom domain
-  COMPOSE_FILE=local.yml:local.traefik.yml:local.traefik.ssl.yml
-  DOMAIN=tpl.local  # same as DOMAIN in Traefik .env!
+    ```env
+    # Mode 2: As dev server behind the Traefik + SSL and custom domain
+    COMPOSE_FILE=local.yml:local.traefik.yml:local.traefik.ssl.yml
+    DOMAIN=tpl.local  # same as DOMAIN in Traefik .env!
     ```
 1. Run Traefik container, then run Nuxt container with `docker compose build` and `docker compose up -d`
 
@@ -98,14 +98,14 @@ export default defineNuxtConfig({
 1. The Traefik container must be running in `Mode 3` on prod server
 1. Rename `.env.example` to `.env`
 1. Set the project name same as `COMPOSE_PROJECT_NAME` in Traefik `.env`
-  ```env
-  COMPOSE_PROJECT_NAME=example
-  ```
+    ```env
+    COMPOSE_PROJECT_NAME=example
+    ```
 1. Uncomment `Mode 3` block:
-  ```env
-  # Mode 3: For production with SSR
-  COMPOSE_FILE=production.yml
-  DOMAIN=your-domain.com
+    ```env
+    # Mode 3: For production with SSR
+    COMPOSE_FILE=production.yml
+    DOMAIN=your-domain.com
     ```
 1. Run container with `docker compose build` and `docker compose up -d`
 
