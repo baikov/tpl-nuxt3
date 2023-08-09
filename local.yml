@@ -16,9 +16,10 @@ services:
     environment:
       - HMR_PROTOCOL=ws
       - PROTOCOL=http
+      - NODE_ENV=development
     ports:
-      - '${NUXT_DOCKER_PORT}:3000'
-      - '${HMR_DOCKER_PORT}:24678'
+      - '${NUXT_DOCKER_PORT:-3000}:3000'
+      - '${HMR_DOCKER_PORT:-24678}:24678'
     command: yarn dev  # sh -c "yarn && yarn dev"
     volumes:
       - .:/nuxt

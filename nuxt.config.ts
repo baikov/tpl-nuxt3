@@ -40,6 +40,7 @@ export default defineNuxtConfig({
     // 'nuxt-schema-org', // https://github.com/harlan-zw/unhead-schema-org
     // '@artmizu/yandex-metrika-nuxt',
     // 'nuxt-vitest',
+    // https://sentry.nuxtjs.org/getting-started/setup
   ],
   vite: {
     server: {

@@ -7,11 +7,76 @@ Other parts:
 2. [Nuxt 3 production-ready template in Docker (SPA/SSR)](https://github.com/baikov/tpl-nuxt3)
 3. [Django/DRF backend in Docker (based on django-cookiecutter)](https://github.com/baikov/drf-tpl)
 
-## Notes for an optimal setup
+## Improvement plan
+
+- [ ] Add TailwindCSS
+- [ ] Add Dark mode (`@nuxtjs/color-mode`)
+- [ ] Add registration
+- [ ] Add SEO modules
+- [ ] Add `@vueuse/nuxt`, `nuxt-icon`, `@nuxt/image-edge`, `@nuxtjs/google-fonts`, `@pinia/nuxt`
+- [ ] Add SPA mode with Nginx
+
+## Local development
+
+Choose one of `.env` presets. HMR working in all modes.
+
+> To use `Mode 1` and `Mode 2`, a raised container from [this repo](https://github.com/baikov/tpl-traefik) with Traefik is required. Because in Traefik compose, an external network is created to which frontend and backend containers are connected.
+
+### Mode 0: As separate dev server on custom port
+
+1. No need for a Traefik container
+1. Rename `.env.example` to `.env`
+1. Set `uniqe` project name
+  ```env
+  COMPOSE_PROJECT_NAME=uniqe_name
+  ```
+1. Uncomment `Mode 0` block:
+  ```env
+  # Mode 0: As separate dev server on custom port
+  COMPOSE_FILE=local.yml
+  DOMAIN=localhost
+  NUXT_DOCKER_PORT=3018  # custom port
+  HMR_DOCKER_PORT=24678
+    ```
+1. Run `docker compose build` and `docker compose up -d`
+
+### Mode 1: As dev server behind the Traefik with http
+
+1. The Traefik container must be running in `Mode 1`
+1. Rename `.env.example` to `.env`
+1. Set the project name same as `COMPOSE_PROJECT_NAME` in Traefik `.env`
+  ```env
+  COMPOSE_PROJECT_NAME=example
+  ```
+1. Uncomment `Mode 1` block:
+  ```env
+  # Mode 1: As dev server behind the Traefik with http
+  COMPOSE_FILE=local.yml:local.traefik.yml
+  DOMAIN=localhost  # or another aliace for 127.0.0.1 declared in etc/hosts, but same as DOMAIN in Traefik .env!
+    ```
+1. Run Traefik container, then run Nuxt container with `docker compose build` and `docker compose up -d`
+
+### Mode 2: As dev server behind the Traefik + SSL and custom domain
+
+1. The Traefik container must be running in `Mode 2`
+1. Rename `.env.example` to `.env`
+1. Set the project name same as `COMPOSE_PROJECT_NAME` in Traefik `.env`
+  ```env
+  COMPOSE_PROJECT_NAME=example
+  ```
+1. Uncomment `Mode 2` block:
+  ```env
+  # Mode 2: As dev server behind the Traefik + SSL and custom domain
+  COMPOSE_FILE=local.yml:local.traefik.yml:local.traefik.ssl.yml
+  DOMAIN=tpl.local  # same as DOMAIN in Traefik .env!
+    ```
+1. Run Traefik container, then run Nuxt container with `docker compose build` and `docker compose up -d`
+
+### Notes for an optimal dev settings
 
 - **Node.js:** Make sure to use an even numbered version (18, 20, etc)
 - **Nuxtr:** Install the community-developed [Nuxtr extension](https://marketplace.visualstudio.com/items?itemName=Nuxtr.nuxtr-vscode)
-- **Volar:** Either enable [Take Over Mode](https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode)
+- **Volar:** Either enable [Take Over Mode](https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode) and install [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) extension
 
 If you have enabled **Take Over Mode** you can disable generating the shim for *.vue files in your `nuxt.config.ts` file:
 
@@ -24,25 +89,30 @@ export default defineNuxtConfig({
 })
 ```
 
-## Local development
+## Deploy to production
 
-### Local development as separate service
+> Using this modes assumes that the `your_domain.com` is already bound to your server (`A` records are configured) and Traefik container raised in production mode
 
-### Local development on custom domain without https
+### Mode 3: SSR (Universal rendering) with Node.js server
 
-### Local development on custom domain with https
+1. The Traefik container must be running in `Mode 3` on prod server
+1. Rename `.env.example` to `.env`
+1. Set the project name same as `COMPOSE_PROJECT_NAME` in Traefik `.env`
+  ```env
+  COMPOSE_PROJECT_NAME=example
+  ```
+1. Uncomment `Mode 3` block:
+  ```env
+  # Mode 3: For production with SSR
+  COMPOSE_FILE=production.yml
+  DOMAIN=your_domain.com
+    ```
+1. Run container with `docker compose build` and `docker compose up -d`
 
-## Production SSR
-...
+### Mode 4: SPA with Nginx
 
-## Takeover Mode
-To enable Takeover Mode, you need to disable VSCode's built-in TS language service in your project's workspace only by following these steps:
+coming soon...
 
-- In your project workspace, bring up the command palette with `Ctrl + Shift + P` (macOS: `Cmd + Shift + P`).
-- Type `built` and select `"Extensions: Show Built-in Extensions"`.
-- Type `typescript` in the extension search box (do not remove `@builtin` prefix).
-- Click the little gear icon of `"TypeScript and JavaScript Language Features"`, and select `"Disable (Workspace)"`.
-- Reload the workspace. Takeover mode will be enabled when you open a `Vue` or `TS` file.
+## Contributing
 
-## Dev dependencies
-- Lint [@antfu/eslint-config](https://github.com/antfu/eslint-config):
+I made this template for myself, but it's awesom if it helps someone else. The settings are far from ideal, so fell free to make a pull request.
