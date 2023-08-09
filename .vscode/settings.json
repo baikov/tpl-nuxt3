@@ -29,7 +29,7 @@
     "markdown",
     "json",
     "jsonc",
-    "yaml"
+    // "yaml"
   ],
   "editor.hover.enabled": true,
   "files.associations": {

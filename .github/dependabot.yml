@@ -17,7 +17,14 @@ updates:
 
   - package-ecosystem: 'docker'
     # Look for a `Dockerfile` in the `compose/local/node` directory
-    directory: 'compose/local/node/'
+    directory: 'compose/local/'
+    # Every weekday
+    schedule:
+      interval: 'daily'
+
+  - package-ecosystem: 'docker'
+    # Look for a `Dockerfile` in the `compose/local/node` directory
+    directory: 'compose/production/'
     # Every weekday
     schedule:
       interval: 'daily'
