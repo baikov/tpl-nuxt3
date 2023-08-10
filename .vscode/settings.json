@@ -39,11 +39,12 @@
   // "volar.completion.preferredAttrNameCase": "kebab",
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
   // "githubIssues.issueBranchTitle": "TPL#${issueNumber}",
-  "githubPullRequests.assignCreated": "${user}",
   "nuxtr.vueFiles.firstTag": "script",
   "nuxtr.vueFiles.script.type": "setup",
   "nuxtr.vueFiles.script.defaultLanguage": "ts",
   "nuxtr.vueFiles.style.addStyleTag": false,
   "nuxtr.vueFiles.style.alwaysScoped": true,
-  "nuxtr.vueFiles.style.defaultLanguage": "css"
+  "nuxtr.vueFiles.style.defaultLanguage": "css",
+  "githubPullRequests.assignCreated": "${user}",
+  "githubPullRequests.postCreate": "checkoutDefaultBranch"
 }
