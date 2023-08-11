@@ -51,6 +51,7 @@ Choose one of `.env` presets. HMR working in all modes.
 1. Uncomment `Mode 1` block:
     ```env
     # Mode 1: As dev server behind the Traefik with http
+    # For Windows users: use `;` (semicolon) as separator - local.yml;local.traefik.yml
     COMPOSE_FILE=local.yml:local.traefik.yml
     DOMAIN=localhost  # or another aliace for 127.0.0.1 declared in etc/hosts, but same as DOMAIN in Traefik .env!
     ```
@@ -67,6 +68,7 @@ Choose one of `.env` presets. HMR working in all modes.
 1. Uncomment `Mode 2` block:
     ```env
     # Mode 2: As dev server behind the Traefik + SSL and custom domain
+    # For Windows users: use `;` (semicolon) as separator - local.yml;local.traefik.yml;local.traefik.ssl.yml
     COMPOSE_FILE=local.yml:local.traefik.yml:local.traefik.ssl.yml
     DOMAIN=tpl.local  # same as DOMAIN in Traefik .env!
     ```

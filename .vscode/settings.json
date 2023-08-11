@@ -46,5 +46,6 @@
   "nuxtr.vueFiles.style.alwaysScoped": true,
   "nuxtr.vueFiles.style.defaultLanguage": "css",
   "githubPullRequests.assignCreated": "${user}",
-  "githubPullRequests.postCreate": "checkoutDefaultBranch"
+  "githubPullRequests.postCreate": "checkoutDefaultBranch",
+  "githubIssues.issueBranchTitle": "${user}/issue#${issueNumber}"
 }
