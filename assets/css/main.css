@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  min-height: 100vh;
+  overflow: overlay;
+}
+
+@layer base {
+  .text-base-color {
+    @apply text-dark-800 dark:text-light-200;
+  }
+}
+
+.theme-icon {
+  @apply h-6 w-6 md:h-6 md:w-6;
+}
+
+.icon--off {
+  @apply inline-block group-hover:hidden;
+}
+.icon--on {
+  @apply hidden group-hover:inline-block;
+}
