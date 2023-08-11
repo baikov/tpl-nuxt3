@@ -6,6 +6,7 @@
     "antfu.goto-alias",
     "vue.volar",
     "nuxtr.nuxtr-vscode",
-    "irongeek.vscode-env"
+    "irongeek.vscode-env",
+    "csstools.postcss"
   ]
 }
