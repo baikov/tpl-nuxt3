@@ -27,9 +27,9 @@ export default defineNuxtConfig({
     shim: false,
   },
   modules: [
+    'nuxt-icon',
     // '@vueuse/nuxt',
     // '@nuxtjs/color-mode',
-    // 'nuxt-icon',
     // '@nuxt/image-edge',
     // '@nuxtjs/google-fonts',
     // "@pinia/nuxt",
