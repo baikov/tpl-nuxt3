@@ -11,7 +11,9 @@
       <!-- <Menu /> -->
       </nav>
       <div class="flex items-center md:flex-initial">
-        <NuxtLink to="https://github.com/baikov/tpl-traefik">
+        <DefaultDarkToggleSwipe />
+        <!-- <DefaultDarkToggle /> -->
+        <NuxtLink to="https://github.com/baikov/tpl-traefik" class="ml-4">
           <Icon name="mdi:github" class="h-8 w-8" />
         </NuxtLink>
       </div>

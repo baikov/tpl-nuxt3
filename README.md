@@ -9,8 +9,8 @@ Other parts:
 
 ## Improvement plan
 
-- [ ] Add TailwindCSS
-- [ ] Add Dark mode (`@nuxtjs/color-mode`)
+- [x] Add TailwindCSS
+- [x] Add Dark mode (`@nuxtjs/color-mode`)
 - [ ] Add registration
 - [ ] Add SEO modules
 - [ ] Add `@vueuse/nuxt`, `nuxt-icon`, `@nuxt/image-edge`, `@nuxtjs/google-fonts`, `@pinia/nuxt`
