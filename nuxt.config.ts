@@ -28,12 +28,12 @@ export default defineNuxtConfig({
   },
   modules: [
     'nuxt-icon',
+    '@nuxtjs/color-mode',
+    'nuxt-headlessui',
     // '@vueuse/nuxt',
-    // '@nuxtjs/color-mode',
     // '@nuxt/image-edge',
     // '@nuxtjs/google-fonts',
     // "@pinia/nuxt",
-    // 'nuxt-headlessui',
     // 'nuxt-simple-sitemap', // https://github.com/harlan-zw/nuxt-simple-sitemap
     // 'nuxt-simple-robots', // https://github.com/harlan-zw/nuxt-simple-robots
     // 'nuxt-unhead', // https://github.com/unjs/unhead
@@ -49,11 +49,19 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ['~/assets/css/main.css'],
+  css: ['@/assets/css/main.css'],
   postcss: {
     plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
+      'tailwindcss': {},
+      'autoprefixer': {},
+      'postcss-import': true,
+
     },
   },
+  colorMode: {
+    classSuffix: '',
+  },
+  // headlessui: {
+  //   prefix: "",
+  // },
 })
