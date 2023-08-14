@@ -6,9 +6,9 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      ],
-    },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
+    }
   },
   runtimeConfig: {
     // apiSecret: '123',
@@ -16,20 +16,19 @@ export default defineNuxtConfig({
       siteUrl: `${process.env.PROTOCOL}://${process.env.DOMAIN}`,
       apiUrl: `${process.env.PROTOCOL}://${process.env.DOMAIN}/api`,
       siteName: process.env.SITE_NAME || 'Nuxt 3',
-      language: 'ru-RU',
+      language: 'ru-RU'
       // titleSeparator: '|',
-    },
+    }
   },
   // ssr: false,  // for SPA with Nginx
   typescript: {
     strict: true,
     typeCheck: false,
-    shim: false,
+    shim: false
   },
   modules: [
-    'nuxt-icon',
-    '@nuxtjs/color-mode',
-    'nuxt-headlessui',
+    '@nuxtjs/eslint-module',
+    '@nuxthq/ui'
     // '@vueuse/nuxt',
     // '@nuxt/image-edge',
     // '@nuxtjs/google-fonts',
@@ -45,23 +44,12 @@ export default defineNuxtConfig({
   vite: {
     server: {
       hmr: {
-        protocol: process.env.HMR_PROTOCOL || 'ws',
-      },
-    },
+        protocol: process.env.HMR_PROTOCOL || 'ws'
+      }
+    }
   },
-  css: ['@/assets/css/main.css'],
-  postcss: {
-    plugins: {
-      'tailwindcss': {},
-      'autoprefixer': {},
-      'postcss-import': true,
-
-    },
-  },
-  colorMode: {
-    classSuffix: '',
-  },
-  // headlessui: {
-  //   prefix: "",
-  // },
+  ui: {
+    global: true,
+    icons: ['mdi', 'heroicons', 'tabler']
+  }
 })

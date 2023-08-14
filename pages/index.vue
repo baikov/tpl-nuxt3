@@ -3,5 +3,4 @@
 
 <template>
   <DefaultHero />
-  <!-- <DefaultAbout /> -->
 </template>

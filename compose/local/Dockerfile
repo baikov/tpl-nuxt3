@@ -1,15 +1,18 @@
-# Build
-FROM node:18-alpine
+ARG NODE_VERSION=18
+
+FROM node:${NODE_VERSION}-alpine as base
+
+ENV NODE_ENV=development
 
 WORKDIR /nuxt
 
-COPY ./package*.json ./
-COPY ./yarn.lock ./
+# Build
+FROM base as build
 
+COPY --link package.json yarn.lock .
 RUN yarn install --non-interactive --production=false
 
-COPY . .
+# Run
+FROM base
 
-# ENV HOST 0.0.0.0
-ENV CHOKIDAR_USEPOLLING=true
-# ENV PATH ./node_modules/.bin/:$PATH
+COPY --from=build /nuxt/node_modules /nuxt/node_modules

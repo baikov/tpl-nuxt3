@@ -9,11 +9,10 @@ Other parts:
 
 ## Improvement plan
 
-- [x] Add TailwindCSS
-- [x] Add Dark mode (`@nuxtjs/color-mode`)
-- [ ] Add registration
+- [x] Add NuxtUI
+- [ ] Add registration/authentication (with `@pinia/nuxt`)
 - [ ] Add SEO modules
-- [ ] Add `@vueuse/nuxt`, `nuxt-icon`, `@nuxt/image-edge`, `@nuxtjs/google-fonts`, `@pinia/nuxt`
+- [ ] Add `@vueuse/nuxt`, `@nuxt/image-edge`, `@nuxtjs/google-fonts`
 - [ ] Add SPA mode with Nginx
 
 ## Local development
