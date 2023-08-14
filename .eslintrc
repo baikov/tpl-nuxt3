@@ -1,19 +1,11 @@
 {
-    "extends": "@antfu",
-    // "ignorePatterns": ["!pages/public"],
-    // "overrides": [
-    //   {
-    //     "files": ["locales/**.json"],
-    //     "rules": {
-    //       "jsonc/sort-keys": "error"
-    //     }
-    //   }
-    // ],
+    "extends": ["@nuxtjs/eslint-config-typescript", "plugin:tailwindcss/recommended"],
     "rules": {
       "vue/no-restricted-syntax":["error", {
         "selector": "VElement[name='a']",
         "message": "Use NuxtLink instead."
       }],
-      "n/prefer-global/process": ["error", "always"]
+      "vue/multi-word-component-names": "off",
+      "tailwindcss/no-custom-classname": "off"
     }
   }
