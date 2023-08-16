@@ -6,6 +6,9 @@ WORKDIR /nuxt
 COPY package*.json ./
 COPY ./yarn.lock ./
 
+# Only for VPS with < 2GB of RAM
+ENV NODE_OPTIONS=--max-old-space-size=512
+
 RUN yarn install --prefer-offline --pure-lockfile --non-interactive --production=false
 
 COPY . .
