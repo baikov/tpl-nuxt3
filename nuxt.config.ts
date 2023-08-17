@@ -28,9 +28,9 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxtjs/eslint-module',
-    '@nuxthq/ui'
+    '@nuxthq/ui',
+    '@nuxt/image'
     // '@vueuse/nuxt',
-    // '@nuxt/image-edge',
     // '@nuxtjs/google-fonts',
     // "@pinia/nuxt",
     // 'nuxt-simple-sitemap', // https://github.com/harlan-zw/nuxt-simple-sitemap
@@ -51,5 +51,11 @@ export default defineNuxtConfig({
   ui: {
     global: true,
     icons: ['mdi', 'heroicons', 'tabler']
+  },
+  image: {
+    domains: [`${process.env.PROTOCOL}://${process.env.DOMAIN}`],
+    alias: {
+      site: `${process.env.PROTOCOL}://${process.env.DOMAIN}`
+    }
   }
 })
