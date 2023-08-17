@@ -19,8 +19,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=global"
-      # - "traefik.http.routers.nuxt.rule=(Host(`${DOMAIN}`) || Host(`www.${DOMAIN}`))"
-      - "traefik.http.routers.nuxt.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.nuxt.rule=(Host(`${DOMAIN}`) || Host(`www.${DOMAIN}`))"
       - "traefik.http.routers.nuxt.entrypoints=websecure"
       - "traefik.http.routers.nuxt.priority=5"
       - "traefik.http.routers.nuxt.tls=true"
