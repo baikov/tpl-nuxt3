@@ -8,7 +8,7 @@
     <UContainer class="flex flex-1 items-center">
       <DefaultLogo />
       <nav class="hidden flex-1 items-center justify-center px-4 md:flex">
-      <!-- <Menu /> -->
+        <DefaultMainMenu />
       </nav>
       <div class="flex items-center md:flex-initial">
         <DefaultDarkToggleSwipe />
