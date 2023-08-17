@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
-  .text-base-color {
-    @apply text-gray-800 dark:text-gray-200;
+@layer base {
+  html {
+    font-family: Nunito, system-ui, sans-serif;
   }
-} */
+  /* .text-base-color {
+    @apply text-gray-800 dark:text-gray-200;
+  } */
+}

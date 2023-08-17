@@ -29,9 +29,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/eslint-module',
     '@nuxthq/ui',
-    '@nuxt/image'
-    // '@vueuse/nuxt',
-    // '@nuxtjs/google-fonts',
+    '@nuxt/image',
+    '@vueuse/nuxt',
+    '@nuxtjs/google-fonts'
     // "@pinia/nuxt",
     // 'nuxt-simple-sitemap', // https://github.com/harlan-zw/nuxt-simple-sitemap
     // 'nuxt-simple-robots', // https://github.com/harlan-zw/nuxt-simple-robots
@@ -56,6 +56,11 @@ export default defineNuxtConfig({
     domains: [`${process.env.PROTOCOL}://${process.env.DOMAIN}`],
     alias: {
       site: `${process.env.PROTOCOL}://${process.env.DOMAIN}`
+    }
+  },
+  googleFonts: {
+    families: {
+      Nunito: [100, 200, 300, 400, 500, 600, 700, 800, 900]
     }
   }
 })

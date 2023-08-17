@@ -7,7 +7,7 @@
         <h2 class="mb-1 text-xs font-medium tracking-widest">
           READY FOR QUICK START
         </h2>
-        <h1 class="text-primary-400 mb-4 text-2xl font-medium sm:text-3xl">
+        <h1 class="text-primary-400 mb-4 text-2xl font-black sm:text-3xl">
           Preconfigured Nuxt 3 with NuxtUI
         </h1>
         <p class="mx-auto text-base leading-relaxed lg:w-2/3">
@@ -16,7 +16,7 @@
       </div>
       <div class="-m-4 flex flex-wrap justify-around">
         <div class="w-full p-4 sm:w-1/2 lg:w-1/4 ">
-          <h2 class="text-primary-400 mb-4 text-center text-sm font-medium tracking-widest sm:text-left">
+          <h2 class="text-primary-400 mb-4 text-center text-sm font-bold tracking-widest sm:text-left">
             MODULES
           </h2>
           <nav class="-mb-1 flex flex-col items-center space-y-2.5 text-center sm:items-start sm:text-left">
@@ -109,7 +109,7 @@
           </nav>
         </div>
         <div class="w-full p-4 sm:w-1/2 lg:w-1/4">
-          <h2 class="text-primary-400 mb-4 text-center text-sm font-medium tracking-widest sm:text-left">
+          <h2 class="text-primary-400 mb-4 text-center text-sm font-bold tracking-widest sm:text-left">
             DEVELOPMENT
           </h2>
           <nav class="-mb-1 flex flex-col items-center space-y-2.5 text-center sm:items-start sm:text-left">
@@ -141,7 +141,7 @@
           </nav>
         </div>
         <div class="w-full p-4 sm:w-1/2 lg:w-1/4">
-          <h2 class="text-primary-400 mb-4 text-center text-sm font-medium tracking-widest sm:text-left">
+          <h2 class="text-primary-400 mb-4 text-center text-sm font-bold tracking-widest sm:text-left">
             DOCKER COMPOSE MODES
           </h2>
           <nav class="-mb-1 flex flex-col items-center space-y-2.5 text-center sm:items-start sm:text-left">
@@ -178,7 +178,7 @@
           </nav>
         </div>
         <div class="w-full p-4 sm:w-1/2 lg:w-1/4">
-          <h2 class="text-primary-400 mb-4 text-center text-sm font-medium tracking-widest sm:text-left">
+          <h2 class="text-primary-400 mb-4 text-center text-sm font-bold tracking-widest sm:text-left">
             PART OF FULLSTACK APP
           </h2>
           <nav class="-mb-1 flex flex-col items-center space-y-2.5 text-center sm:items-start sm:text-left">
