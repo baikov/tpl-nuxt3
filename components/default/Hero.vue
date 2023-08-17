@@ -224,5 +224,13 @@
         </NuxtLink>
       </div>
     </UContainer>
+    <UContainer class="flex justify-center pb-5">
+      <!-- <NuxtImg :src="`/site/media/test.png`" width="60" height="30" class="dark:invert" /> -->
+      <NuxtPicture
+        src="/img/nuxt.png"
+        sizes="sm:50 md:100px lg:150px"
+        :img-attrs="{ class: 'dark:invert' }"
+      />
+    </UContainer>
   </section>
 </template>
