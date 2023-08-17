@@ -1,3 +1,5 @@
+<script lang="ts" setup>
+</script>
 <template>
   <section class="w-full">
     <UContainer class="py-24">
