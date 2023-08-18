@@ -31,12 +31,12 @@ export default defineNuxtConfig({
     '@nuxthq/ui',
     '@nuxt/image',
     '@vueuse/nuxt',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    'nuxt-simple-sitemap', // https://github.com/harlan-zw/nuxt-simple-sitemap
+    'nuxt-simple-robots', // https://github.com/harlan-zw/nuxt-simple-robots
+    'nuxt-og-image', // https://github.com/harlan-zw/nuxt-og-image
+    'nuxt-schema-org' // https://unhead-schema-org.harlanzw.com/integrations/nuxt/module
     // "@pinia/nuxt",
-    // 'nuxt-simple-sitemap', // https://github.com/harlan-zw/nuxt-simple-sitemap
-    // 'nuxt-simple-robots', // https://github.com/harlan-zw/nuxt-simple-robots
-    // 'nuxt-unhead', // https://github.com/unjs/unhead
-    // 'nuxt-schema-org', // https://github.com/harlan-zw/unhead-schema-org
     // '@artmizu/yandex-metrika-nuxt',
     // 'nuxt-vitest',
     // https://sentry.nuxtjs.org/getting-started/setup
@@ -53,6 +53,7 @@ export default defineNuxtConfig({
     icons: ['mdi', 'heroicons', 'tabler']
   },
   image: {
+    // dir: 'assets/img',
     domains: [`${process.env.PROTOCOL}://${process.env.DOMAIN}`],
     alias: {
       site: `${process.env.PROTOCOL}://${process.env.DOMAIN}`
@@ -63,5 +64,13 @@ export default defineNuxtConfig({
       // Nunito: [100, 200, 300, 400, 500, 600, 700, 800, 900],
       Ubuntu: [100, 200, 300, 400, 500, 600, 700, 800, 900]
     }
+  },
+  vueuse: {
+    ssrHandlers: true
+  },
+  robots: {
+    // provide simple disallow rules for all robots `user-agent: *`
+    disallow: ['/account', '/admin'],
+    allow: '/admin/login'
   }
 })
