@@ -4,9 +4,9 @@
   <section class="w-full">
     <UContainer class="py-24">
       <div class="mb-20 flex w-full flex-col text-center">
-        <h2 class="mb-1 text-xs font-medium tracking-widest">
+        <p class="mb-1 text-xs font-medium tracking-widest">
           READY FOR QUICK START
-        </h2>
+        </p>
         <h1 class="text-primary-400 mb-4 text-2xl font-black sm:text-3xl">
           Preconfigured Nuxt 3 with NuxtUI
         </h1>
