@@ -6691,10 +6691,10 @@ nuxt-simple-robots@^3.1.1:
     pathe "^1.1.1"
     ufo "^1.2.0"
 
-nuxt-simple-sitemap@^3.1.7:
-  version "3.1.7"
-  resolved "https://registry.yarnpkg.com/nuxt-simple-sitemap/-/nuxt-simple-sitemap-3.1.7.tgz#b045632ecba1bf4d260ca83b2c7ac848a401a52a"
-  integrity sha512-H9N2mVhLyDD8p5hsLbd0nLJGSUDwgEjEz3EBUiFGYp6uN83YxR/Qjcn88iIw8WL2GAmhIBO+1oqO/lbGZO2u4w==
+nuxt-simple-sitemap@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/nuxt-simple-sitemap/-/nuxt-simple-sitemap-3.2.4.tgz#f843963e7a823df4824280d8c4cd0b4878f7c9e9"
+  integrity sha512-E0Lm7boRvX7CBVwblTJlR127mP+Ja7xcdGTU2PNsBAVfcob3dYOL14LXnWV5VcI2OfQz8bk8QRip6nS7sbORlA==
   dependencies:
     "@nuxt/devtools-kit" "^0.8.0"
     "@nuxt/kit" "^3.6.5"
@@ -6706,7 +6706,7 @@ nuxt-simple-sitemap@^3.1.7:
     nuxt-site-config "^1.0.10"
     nuxt-site-config-kit "^1.0.10"
     pathe "^1.1.1"
-    radix3 "^1.0.1"
+    radix3 "^1.1.0"
     semver "^7.5.4"
     site-config-stack "^1.0.10"
     ufo "^1.2.0"
@@ -7743,10 +7743,10 @@ queue@6.0.2:
   dependencies:
     inherits "~2.0.3"
 
-radix3@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/radix3/-/radix3-1.0.1.tgz#de0ac16234f8a63288645854a54fc26e45a4a8eb"
-  integrity sha512-y+AcwZ3HcUIGc9zGsNVf5+BY/LxL+z+4h4J3/pp8jxSmy1STaCocPS3qrj4tA5ehUSzqtqK+0Aygvz/r/8vy4g==
+radix3@^1.0.1, radix3@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/radix3/-/radix3-1.1.0.tgz#9745df67a49c522e94a33d0a93cf743f104b6e0d"
+  integrity sha512-pNsHDxbGORSvuSScqNJ+3Km6QAVqk8CfsCBIEoDgpqLrkD2f3QM4I7d1ozJJ172OmIcoUcerZaNWqtLkRXTV3A==
 
 randombytes@^2.1.0:
   version "2.1.0"
