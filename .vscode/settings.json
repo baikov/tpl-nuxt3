@@ -24,6 +24,7 @@
     "source.fixAll": false
   },
   // Nuxt
+  "nuxtr.defaultPackageManager": "Yarn",
   "nuxtr.vueFiles.firstTag": "script",
   "nuxtr.vueFiles.script.type": "setup",
   "nuxtr.vueFiles.script.defaultLanguage": "ts",

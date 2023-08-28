@@ -10,9 +10,9 @@ Other parts:
 ## Improvement plan
 
 - [x] Add NuxtUI
+- [x] Add SEO modules
+- [x] Add `@vueuse/nuxt`, `@nuxt/image-edge`, `@nuxtjs/google-fonts`
 - [ ] Add registration/authentication (with `@pinia/nuxt`)
-- [ ] Add SEO modules
-- [ ] Add `@vueuse/nuxt`, `@nuxt/image-edge`, `@nuxtjs/google-fonts`
 - [ ] Add SPA mode with Nginx
 
 ## Local development

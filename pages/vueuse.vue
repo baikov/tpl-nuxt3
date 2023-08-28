@@ -3,6 +3,9 @@ import { ref } from 'vue'
 import { useDraggable, useClipboard } from '@vueuse/core'
 const config = useRuntimeConfig()
 const toast = useToast()
+// definePageMeta({
+//   middleware: 'logedinonly'
+// })
 
 const el = ref<HTMLElement | null>(null)
 
@@ -39,7 +42,6 @@ useHead({
     { rel: 'canonical', href: `${config.public.siteUrl}/vueuse` }
   ]
 })
-defineOgImageScreenshot()
 const breadcrumbs = [
   {
     level: 1,
