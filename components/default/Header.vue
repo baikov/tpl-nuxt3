@@ -1,4 +1,12 @@
 <script lang="ts" setup>
+// import { storeToRefs } from 'pinia'
+// import { useAuthStore } from '~/store/auth'
+// const router = useRouter()
+// const { authenticated } = storeToRefs(useAuthStore())
+// const logout = () => {
+//   logUserOut()
+//   router.push('/login')
+// }
 </script>
 
 <template>
@@ -16,6 +24,7 @@
         <NuxtLink to="https://github.com/baikov/tpl-traefik" class="ml-4">
           <UIcon name="i-mdi-github" class="h-8 w-8" />
         </NuxtLink>
+        <DefaultHeaderProfile class="ml-4" />
       </div>
     </UContainer>
   </header>

@@ -11,7 +11,7 @@
           Preconfigured Nuxt 3 with NuxtUI
         </h1>
         <p class="mx-auto text-base leading-relaxed lg:w-2/3">
-          Include TailwindCSS + headlessui, ready to use as part of fullstack project.
+          Include TailwindCSS + headlessui, ready to use as part of fullstack project with Django+DRF as backend.
         </p>
       </div>
       <div class="-m-4 flex flex-wrap justify-around">

@@ -1,4 +1,9 @@
 <script lang="ts" setup>
+defineOgImage({
+  component: 'OgImageDefault'
+  // title: 'My awesome home page.'
+})
+// defineOgImageScreenshot()
 </script>
 
 <template>

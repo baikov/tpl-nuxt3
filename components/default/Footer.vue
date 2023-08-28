@@ -16,7 +16,7 @@ const year = new Date().getFullYear()
           baikov<span class="font-bold text-red-500 dark:text-gray-200">.dev</span>
         </NuxtLink>
         <span class="bg-primary-500 text-light-200 block rounded px-1 py-0.5 text-xs dark:bg-gray-200 dark:text-gray-900">
-          v1.2.0
+          v0.5.0
         </span>
       </div>
     </UContainer>

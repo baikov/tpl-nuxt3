@@ -25,12 +25,6 @@ useHead({
     { rel: 'canonical', href: config.public.siteUrl }
   ]
 })
-
-// defineOgImage({
-//   component: 'OgImageDefault'
-//   // title: 'My awesome home page.'
-// })
-defineOgImageScreenshot()
 </script>
 
 <template>

@@ -14,7 +14,8 @@ export default defineNuxtConfig({
     // apiSecret: '123',
     public: {
       siteUrl: `${process.env.PROTOCOL}://${process.env.DOMAIN}`,
-      apiUrl: `${process.env.PROTOCOL}://${process.env.DOMAIN}/api`,
+      // apiUrl: `${process.env.PROTOCOL}://${process.env.DOMAIN}/api`,
+      apiUrl: 'https://tpl.local/api',
       siteName: process.env.SITE_NAME || 'Nuxt 3',
       language: 'ru-RU'
       // titleSeparator: '|',
@@ -35,8 +36,8 @@ export default defineNuxtConfig({
     'nuxt-simple-sitemap', // https://github.com/harlan-zw/nuxt-simple-sitemap
     'nuxt-simple-robots', // https://github.com/harlan-zw/nuxt-simple-robots
     'nuxt-og-image', // https://github.com/harlan-zw/nuxt-og-image
-    'nuxt-schema-org' // https://unhead-schema-org.harlanzw.com/integrations/nuxt/module
-    // "@pinia/nuxt",
+    'nuxt-schema-org', // https://unhead-schema-org.harlanzw.com/integrations/nuxt/module
+    '@pinia/nuxt'
     // '@artmizu/yandex-metrika-nuxt',
     // 'nuxt-vitest',
     // https://sentry.nuxtjs.org/getting-started/setup
