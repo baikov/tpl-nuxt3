@@ -14,8 +14,7 @@ export default defineNuxtConfig({
     // apiSecret: '123',
     public: {
       siteUrl: `${process.env.PROTOCOL}://${process.env.DOMAIN}`,
-      // apiUrl: `${process.env.PROTOCOL}://${process.env.DOMAIN}/api`,
-      apiUrl: 'https://tpl.local/api',
+      apiUrl: `${process.env.PROTOCOL}://${process.env.DOMAIN}/api`,
       siteName: process.env.SITE_NAME || 'Nuxt 3',
       language: 'ru-RU'
       // titleSeparator: '|',
