@@ -2571,6 +2571,11 @@ bindings@^1.4.0:
   dependencies:
     file-uri-to-path "1.0.0"
 
+birpc@0.2.12:
+  version "0.2.12"
+  resolved "https://registry.yarnpkg.com/birpc/-/birpc-0.2.12.tgz#5b0e2a154e0a000f8696b1ccef0a16b8639896aa"
+  integrity sha512-6Wz9FXuJ/FE4gDH+IGQhrYdalAvAQU1Yrtcu1UlMk3+9mMXxIRXiL+MxUcGokso42s+Fy+YoUXGLOdOs0siV3A==
+
 birpc@^0.2.13:
   version "0.2.13"
   resolved "https://registry.yarnpkg.com/birpc/-/birpc-0.2.13.tgz#9cb90b011be7c9d73a7a0e58ad58427a0609d9d6"
@@ -6749,16 +6754,16 @@ nuxi@^3.7.0:
   optionalDependencies:
     fsevents "~2.3.3"
 
-nuxt-og-image@^2.0.18:
-  version "2.0.20"
-  resolved "https://registry.yarnpkg.com/nuxt-og-image/-/nuxt-og-image-2.0.20.tgz#705a95c0cffc9887f6f68fc61d344c538c6504d5"
-  integrity sha512-sMMgspEjYVynk5yGDX+MoJChsY5ZF3V2mbLoTPcKzgSH3vEvVa5wEHh6DOayCLg7WMFQRRZLiCY/cAOmqQ9jkw==
+nuxt-og-image@^2.0.21:
+  version "2.0.21"
+  resolved "https://registry.yarnpkg.com/nuxt-og-image/-/nuxt-og-image-2.0.21.tgz#66945fcd08c808952d28c71a8646037b932eeb03"
+  integrity sha512-vTHAMY92ADwJfEhPtYH5tLf3w8QKR2YEL3nM2SjW72TvQOYpkFCc56oeUUzsUI2eQj0SWSVy4sZJUvXtC/NiFg==
   dependencies:
     "@nuxt/kit" "^3.7.0"
     "@resvg/resvg-js" "^2.4.1"
     "@resvg/resvg-wasm" "^2.4.1"
     "@types/fs-extra" "^11.0.1"
-    birpc "^0.2.13"
+    birpc "0.2.12"
     chalk "^5.3.0"
     chrome-launcher "^1.0.0"
     defu "^6.1.2"
@@ -9766,6 +9771,7 @@ word-wrap@~1.2.3:
   integrity sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
