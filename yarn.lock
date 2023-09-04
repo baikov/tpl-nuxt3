@@ -2572,12 +2572,7 @@ bindings@^1.4.0:
   dependencies:
     file-uri-to-path "1.0.0"
 
-birpc@0.2.12:
-  version "0.2.12"
-  resolved "https://registry.yarnpkg.com/birpc/-/birpc-0.2.12.tgz#5b0e2a154e0a000f8696b1ccef0a16b8639896aa"
-  integrity sha512-6Wz9FXuJ/FE4gDH+IGQhrYdalAvAQU1Yrtcu1UlMk3+9mMXxIRXiL+MxUcGokso42s+Fy+YoUXGLOdOs0siV3A==
-
-birpc@^0.2.13:
+birpc@0.2.13, birpc@^0.2.13:
   version "0.2.13"
   resolved "https://registry.yarnpkg.com/birpc/-/birpc-0.2.13.tgz#9cb90b011be7c9d73a7a0e58ad58427a0609d9d6"
   integrity sha512-30rz9OBSJoGfiWox7dpyqoSVo6664PBEYSTfmmG1GBridUxnMysyovNpnwhaPMvjtKn3Y1UfII+HMTU0kqJFjA==
@@ -6742,16 +6737,16 @@ nuxi@^3.7.0:
   optionalDependencies:
     fsevents "~2.3.3"
 
-nuxt-og-image@^2.0.21:
-  version "2.0.21"
-  resolved "https://registry.yarnpkg.com/nuxt-og-image/-/nuxt-og-image-2.0.21.tgz#66945fcd08c808952d28c71a8646037b932eeb03"
-  integrity sha512-vTHAMY92ADwJfEhPtYH5tLf3w8QKR2YEL3nM2SjW72TvQOYpkFCc56oeUUzsUI2eQj0SWSVy4sZJUvXtC/NiFg==
+nuxt-og-image@^2.0.24:
+  version "2.0.24"
+  resolved "https://registry.yarnpkg.com/nuxt-og-image/-/nuxt-og-image-2.0.24.tgz#a02911fb9576309fc4e81a63d4ebb20f4b937578"
+  integrity sha512-ac0IUd5v7AYAn5Jis+upxu5ROHmzz1lmtfRQWyMARvTFI55PVTtRT5q+WccwGYlnrMi3n25K37IwsbdzxM/JSg==
   dependencies:
     "@nuxt/kit" "^3.7.0"
     "@resvg/resvg-js" "^2.4.1"
     "@resvg/resvg-wasm" "^2.4.1"
     "@types/fs-extra" "^11.0.1"
-    birpc "0.2.12"
+    birpc "0.2.13"
     chalk "^5.3.0"
     chrome-launcher "^1.0.0"
     defu "^6.1.2"
@@ -6765,13 +6760,13 @@ nuxt-og-image@^2.0.21:
     launch-editor "^2.6.0"
     nuxt-site-config "^1.0.11"
     nuxt-site-config-kit "^1.0.11"
-    nypm "^0.3.1"
+    nypm "^0.3.2"
     ofetch "^1.3.3"
     ohash "^1.1.3"
     pathe "^1.1.1"
     playwright-core "^1.37.1"
     radix3 "^1.1.0"
-    satori "0.10.3"
+    satori "0.10.4"
     satori-html "^0.3.2"
     sirv "^2.0.3"
     std-env "^3.4.3"
@@ -6906,13 +6901,13 @@ nuxt@^3.6.5, nuxt@^3.7.0:
     vue-devtools-stub "^0.1.0"
     vue-router "^4.2.4"
 
-nypm@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/nypm/-/nypm-0.3.1.tgz#3124c71895bd6270b6be5ed3f0c69aaa21091c37"
-  integrity sha512-WbyW4kp5TEIchdfdAUW4PdFlxl508nPAJsZml0ONk+A29vNHSW+3HEq3OmLvbDWYZrSVZ+Ios++7D/ENnv1YlA==
+nypm@^0.3.1, nypm@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/nypm/-/nypm-0.3.2.tgz#0fb6c9b49df74441c238d25fd7e0ed65b9f24a7d"
+  integrity sha512-a49F06faGtgflUVvqIkBmrYkijbbhjEoR40gzgw7I43J1p3DkHQegNcRhaGaHddIYQ0KwrmvD1W/h16jn/2puA==
   dependencies:
     execa "^8.0.1"
-    ufo "^1.2.0"
+    ufo "^1.3.0"
 
 object-assign@^4.0.1, object-assign@^4.1.1:
   version "4.1.1"
@@ -8213,10 +8208,10 @@ satori-html@^0.3.2:
   dependencies:
     ultrahtml "^1.2.0"
 
-satori@0.10.3:
-  version "0.10.3"
-  resolved "https://registry.yarnpkg.com/satori/-/satori-0.10.3.tgz#acb52506efca88b911295935e2eaae792e5722ca"
-  integrity sha512-8tZPu7AGiRWimbOyja1s2HK0hEC4DacZ8cAKDITxlVI5tKQZbOuMiVgSB50CABwc0I4Imgtkq7o9Egj1WOJTKg==
+satori@0.10.4:
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/satori/-/satori-0.10.4.tgz#ba2b050b5cd00757e02dede45710d8b0a58aac04"
+  integrity sha512-GJNIsuiXhiC9kWGLvz04Op5DZy2UFYZAWsuUtkTlQt3r15o0K96PeD+FMfGN4luMPUHc4uV9gXqAoPxOK0omSw==
   dependencies:
     "@shuding/opentype.js" "1.4.0-beta.0"
     css-background-parser "^0.1.0"
