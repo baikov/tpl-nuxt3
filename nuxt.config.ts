@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   app: {
     head: {
       charset: 'utf-8',
@@ -13,22 +13,22 @@ export default defineNuxtConfig({
   runtimeConfig: {
     // apiSecret: '123',
     public: {
-      siteUrl: `${process.env.PROTOCOL}://${process.env.DOMAIN}`,
-      apiUrl: `${process.env.PROTOCOL}://${process.env.DOMAIN}/api`,
+      siteUrl: `${process.env.HTTPS === 'true' ? 'https://' : 'http://'}${process.env.DOMAIN}`,
+      apiUrl: `${process.env.HTTPS === 'true' ? 'https://' : 'http://'}${process.env.DOMAIN}${process.env.API_PORT ? `:${process.env.API_PORT}` : ''}/api`,
       siteName: process.env.SITE_NAME || 'Nuxt 3',
       language: 'ru-RU'
       // titleSeparator: '|',
     }
   },
-  // ssr: false,  // for SPA with Nginx
+  // ssr: true, // for SPA with Nginx
   typescript: {
     strict: true,
     typeCheck: false,
     shim: false
   },
   modules: [
-    '@nuxtjs/eslint-module',
-    '@nuxthq/ui',
+    '@nuxtjs/eslint-module', // https://github.com/nuxt-modules/eslint
+    '@nuxt/ui',
     '@nuxt/image',
     '@vueuse/nuxt',
     '@nuxtjs/google-fonts',
@@ -44,19 +44,19 @@ export default defineNuxtConfig({
   vite: {
     server: {
       hmr: {
-        protocol: process.env.HMR_PROTOCOL || 'ws'
+        protocol: `${process.env.HTTPS === 'true' ? 'wss' : 'ws'}`
       }
     }
   },
   ui: {
     global: true,
-    icons: ['mdi', 'heroicons', 'tabler']
+    icons: ['mdi', 'heroicons', 'tabler', 'icon-park-solid']
   },
   image: {
     // dir: 'assets/img',
-    domains: [`${process.env.PROTOCOL}://${process.env.DOMAIN}`],
+    domains: [`${process.env.HTTPS === 'true' ? 'https://' : 'http://'}${process.env.DOMAIN}`],
     alias: {
-      site: `${process.env.PROTOCOL}://${process.env.DOMAIN}`
+      site: `${process.env.HTTPS === 'true' ? 'https://' : 'http://'}${process.env.DOMAIN}`
     }
   },
   googleFonts: {
@@ -72,5 +72,11 @@ export default defineNuxtConfig({
     // provide simple disallow rules for all robots `user-agent: *`
     disallow: ['/account', '/admin'],
     allow: '/admin/login'
+  },
+  eslint: {
+    lintOnStart: false
+  },
+  tailwindcss: {
+    viewer: false
   }
 })

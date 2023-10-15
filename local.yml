@@ -15,13 +15,11 @@ services:
     restart: unless-stopped
     env_file: .env
     environment:
-      - HMR_PROTOCOL=ws
-      - PROTOCOL=http
       - NODE_ENV=development
     ports:
       - '${NUXT_DOCKER_PORT:-3000}:3000'
       - '${HMR_DOCKER_PORT:-24678}:24678'
-    command: sh -c "yarn postinstall && yarn dev"  # yarn dev
+    command: yarn dev --host
     volumes:
       - .:/nuxt
       - dev_nuxt:/nuxt/.nuxt

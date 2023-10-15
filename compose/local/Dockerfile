@@ -1,6 +1,4 @@
-ARG NODE_VERSION=18
-
-FROM node:${NODE_VERSION}-alpine as base
+FROM node:20.7.0-alpine as base
 
 ENV NODE_ENV=development
 
