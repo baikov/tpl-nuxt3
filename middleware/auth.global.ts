@@ -15,8 +15,9 @@ export default defineNuxtRouteMiddleware((to) => {
   }
 
   // if token exists and url is /login redirect to homepage
-  if (authenticated.value === false && to?.name === 'useronly') {
-    return navigateTo('/login')
+  // if (authenticated.value === false && to?.name === 'useronly') {
+  if (authenticated.value === false && to?.name !== 'account') {
+    return navigateTo('/account')
   }
   if (!confirmationCookie.value && to?.path === '/account/confirm') {
     return navigateTo('/account')

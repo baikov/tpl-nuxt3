@@ -13,7 +13,7 @@ const year = new Date().getFullYear()
       </div>
       <div class="flex flex-col items-center gap-2 sm:float-right sm:flex-row">
         <NuxtLink to="https://baikov.dev" target="_blank" class="text-sm font-bold">
-          baikov<span class="font-bold text-red-500 dark:text-gray-200">.dev</span>
+          baikov<span class="text-primary-500 font-bold dark:text-gray-200">.dev</span>
         </NuxtLink>
         <span class="bg-primary-500 text-light-200 block rounded px-1 py-0.5 text-xs dark:bg-gray-200 dark:text-gray-900">
           v0.5.0
